@@ -1,0 +1,162 @@
+@mixin flex ($justify-content: null, $align-items: null, $flex-wrap:null, $flex-direction: null) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	flex-wrap: $flex-wrap;
+	flex-direction: $flex-direction;
+}
+
+@mixin pseudo ($content: '') {
+	content: $content;
+	display: block;
+}
+
+@mixin pos ($position: null, $top: null, $bottom: null, $left: null, $right: null) {
+	position: $position;
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+}
+
+
+@mixin font ($font-size: null, $line-height: null, $font-weight: null, $text-align: null, $text-transform: null) {
+	font-size: $font-size;
+	line-height: $line-height;
+	text-transform: $text-transform;
+	font-weight: $font-weight;
+	text-align: $text-align;
+}
+
+@mixin background ($img) {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: $img;
+}
+
+
+@mixin border($border-width: null, $border-style: solid, $border-color: null) {
+	border-width: $border-width;
+	border-style: $border-style;
+	border-color: $border-color;
+}
+
+@mixin colors($text, $background, $border) {
+	color: $text;
+	background-color: $background;
+	border-color: $border;
+}
+
+@mixin wh ($width: $width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin wh-px ($width: $width, $height: $width) {
+	width: #{$width}px;
+	height: #{$height}px;
+}
+
+@mixin media ($width, $type:min) {
+	@if map_has_key ($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+
+		@if $type==max {
+			$width: $width - 1px;
+		}
+	}
+
+	@media (#{$type}-width: $width) {
+		@content;
+	}
+}
+
+@mixin text($fontSize, $lineHeight, $color) {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	color: $color;
+   }
+   
+   
+//    @mixin pseudo($display: block, $pos: absolute, $content: '') {
+// 	content: $content;
+// 	display: $display;
+// 	position: $pos;
+//    }   
+
+// брейкпойнтs
+// maxW375       max-width 375px
+// minW375       min-width 375px
+// minW768       min-width 768px
+// minW1024      min-width 1024px
+// minW1440      min-width 1440px
+// minW1592      min-width 1592px
+// minW1600      min-width 1600px
+
+@mixin maxW375 {
+	@media (max-width: 375px) {
+		@content;
+	}
+}
+
+@mixin minW375 {
+	@media (min-width: 376px) {
+		@content;
+	}
+}
+
+@mixin minW768 {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin minW1024 {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin minW1440 {
+	@media (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin minW1592 {
+	@media (min-width: 1592px) {
+		@content;
+	}
+}
+
+@mixin minW1600 {
+	@media (min-width: 1600px) {
+		@content;
+	}
+}
+
+
+@mixin flex($direction, $justify) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+}
+
+
+
+// $base-font-size: 16;
+// @mixin font-size-rems($target-px-size) {
+//     $rem-size: $target-px-size / $base-font-size;
+//     font-size: $target-px-size * 1px;
+//     font-size: $rem-size * 1rem;
+// }
+
+@function px-to-rem($px-val) {
+	$rem: calc($px-val / 16);
+	@return ($rem * 1rem);
+}
+
+@mixin transition-time($time) {
+	transition: all $time * 0.1s ease-in;
+}

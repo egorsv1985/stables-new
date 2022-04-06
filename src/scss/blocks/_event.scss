@@ -1,0 +1,202 @@
+.event {
+ background-color: $bgColor;
+ .container {
+  @extend %container;
+ }
+ &__top {
+  @include media (md) {
+   display: flex;
+   align-items: center; 
+   justify-content: space-between;
+  }
+ }
+ &__top-title {
+  @include text(32px, 1.2, $titleColor);
+  margin-bottom: 15px;
+  margin-right: 15px;
+  @include media (md) {
+   font-size: 38px;
+  }
+  @include media (lg) {
+   font-size: 52px;
+  }
+  @include media (xl) {
+   font-size: 64px;
+   max-width: 590px;
+  }
+ }
+ &__top-text {
+  @include text(16px, 1.5, $accentColor);
+  margin-bottom: 15px;
+  min-width: 335px;
+  @include media (md) {
+   max-width: 400px;
+  }
+  @include media (lg) {
+   max-width: 504px;
+  }
+  @include media (xl) {
+   font-size: 18px;
+   max-width: 592px;
+   width: 100%;
+  }
+ }
+ &__content-item {
+  padding: 15px 0 30px;
+  border-bottom: 1px solid #EFEFEF;
+ }
+ &__info {
+  margin-bottom: 24px;
+   @include media (lg) {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+   }
+ }
+ &__descr {
+  min-width: 335px;
+  margin-bottom: 15px;
+  @include media (lg) {
+   max-width: 470px;
+  }
+  @include media (xl) {
+   max-width: 592px;
+  }
+ }
+ &__descr-title {
+  @include text(24px, 1.3, $accentColor);
+  margin-bottom: 8px;
+  @include media (sm) {
+   font-size: 32px;
+  }
+  @include media (lg) {
+   font-size: 40px;
+  }
+ }
+ &__price,
+ &__capacity,
+ &__area {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 16px;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+   @include media (lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 176px;  
+    height: 166px; 
+    margin: 0; 
+    border: none;
+    padding: 0;
+   }
+  }
+ &__price-number,
+ &__capacity-number,
+ &__area-number {
+  @include text(40px, 1.2, #C7A17A);
+  margin-right: 15px;
+  width: 74px;
+   @include media (lg) {
+    display: none;
+   }
+ }
+ &__price-number--desktop,
+ &__capacity-number--desktop,
+ &__area-number--desktop {
+  display: none;
+   @include media (lg) {
+    display: block;
+    @include text(14px, 1.2, #C7A17A);
+     span {
+      font-size: 40px;
+     }
+   }
+ }
+ &__capacity-number {
+  padding-right: 32px;
+ }
+ &__price-text,
+ &__capacity-text,
+ &__area-text{
+  @include text(16px, 1.3, $accentColor);
+   span {
+    color:#C7A17A; 
+   }
+    @include media (lg) {
+     span {
+      display: none;
+     }
+    }
+ }
+ &__area {
+  border-bottom: none;
+  padding-bottom: 0;
+ }
+ &__area-text {
+  max-width: 102px;
+ }
+ &__organization {
+  padding: 30px 0;
+ }
+ &__organization-title {
+  @include text(24px, 1.3, $titleColor);
+  margin-bottom: 15px;
+  @include media (sm) {
+   font-size: 36px;
+  }
+  @include media (lg) {
+   font-size: 48px;
+  }
+ }
+ &__organization-box {
+  @include media (lg) {
+   display: flex;
+   justify-content: space-between;
+  }
+ }
+ &__organization-item {
+  min-width: 335px;
+   &:not(:last-child) {
+    margin-bottom: 16px;
+   }
+   @include media (lg) {
+    max-width: 592px;
+   }
+ }
+ &__organization-text {
+  margin-bottom: 15px;
+ }
+ &__organization-phone {
+  @include text(24px, 1.3, #C7A17A);
+ }
+ &__organization-links {
+  @include media (sm) {
+   margin-top: 35px;
+  }
+ }
+ &__organization-link {
+  &--white {
+   background-color: $bgColor;
+   border: 1px solid #C7A17A;
+   color:#C7A17A;
+   border-radius: 8px;
+   width: 100%;
+   padding: 14px 0;
+   display: block;
+   text-align: center;
+    @include media (sm) {
+     padding: 14px 20px;
+     display: inline;
+    }
+  }
+   &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @include media (sm) {
+   padding: 14px 20px;
+   display: inline;
+  }
+ }
+}

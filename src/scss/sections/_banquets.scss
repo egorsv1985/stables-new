@@ -1,0 +1,182 @@
+.banquets {
+    &__inner{
+        padding: 80px 0;
+    }
+    &__title {
+        max-width: 330px;
+        margin-bottom: 20px;
+        @extend %title-text;
+        color: $textColor;
+    }
+
+    &__description {
+        max-width: 315px;
+        margin-bottom: 16px;
+        @extend %description-text;
+    }
+    &__description:last-child{
+        margin-top: 16px;
+        margin-bottom: 10px;
+    }
+
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    
+    &__menu-price {
+    
+        width: 100%;
+    }
+    
+    &__list {
+    
+        border-top: 1px solid #E0E0E0;
+        padding: 7px 0 9px;
+    }
+    
+    &__list:last-child {
+        margin-bottom: 8px;
+    }
+    
+    &__menu-title {
+        display: inline-block;
+        width: 151.5px;
+        margin-right: 32px;
+        @extend %description-text;
+    }
+    
+    &__menu-price {
+        @extend %description-text;
+    }
+}
+
+.banquets__contacts{
+    margin-top: 8px;
+}
+.banquets__link {
+    margin-top: 10px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #C7A17A;
+}
+
+.banquets__hours {
+font-family: Jost;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+}
+
+@media (min-width:425px) {
+    .banquets{
+        &__description {
+            max-width: 425px;
+        }
+        &__menu-title {
+            margin-right: 5px;
+            width: 151.5px;
+        }
+	
+    }
+    
+    
+}
+@media (min-width: 768px) {
+    .banquets{
+        &__title {
+            max-width: 100%;
+            width: 100%;
+        }
+        &__description {
+            max-width: 768px;
+        }
+        &__menu-title {
+            max-width: 100%;
+            width: 350px;
+        }
+    
+        &__list {
+            padding: 7px 70px 9px;
+        }
+    
+        &__menu-price {
+            margin-left: 100px;
+        }
+    }
+    
+
+    .events {
+        .banquets__title {
+            max-width: 290px;
+        }
+    }
+
+}
+
+@media (min-width: 1200px){
+    .banquets{
+        &__inner{
+            padding: 80px 0;
+        }
+        &__menu {
+            column-count: 2;
+            margin-bottom: 75px;
+            max-height: 245px;
+        }
+        &__list {
+            padding: 7px 30px 9px;
+            width: 48%;
+        }
+        &__menu-title {
+            width: 265px;
+        }
+        &__menu-price {
+            margin-left: 60px;
+        }
+    }
+}
+
+@media (min-width: 1592px) {
+    .banquets {
+        &__title {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        &__description {
+            margin-bottom: 33px;
+        }
+
+        &__menu {
+            column-count: 2;
+            margin-bottom: 75px;
+            max-height: 240px;
+        }
+    
+        &__list {
+            display: flex;
+            border-top: 1px solid #E0E0E0;
+            display: flex;
+            padding: 7px 0 7px;
+            justify-content: center;
+            align-items: center;
+            width: 48%;
+        }
+        &__menu-title {
+            width: 735px;
+    
+        }
+        &__menu-price {
+            margin-left: 0;
+        }
+	}
+}

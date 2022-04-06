@@ -1,0 +1,15 @@
+.button {
+
+
+
+
+	&:hover {
+		color: $colorTextDark;
+		background-color: $colorTextLight;
+	}
+
+	&:active {
+		background-color: hsl(0, 0%, 80%);
+		color: $colorAccentDark;
+	}
+}

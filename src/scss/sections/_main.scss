@@ -1,0 +1,130 @@
+.main {
+
+	padding: 80px 0;
+
+	@include background(url("./../img/main/main-bg-mob.jpg"));
+
+	@media (min-width:1000px) {
+		@include background(url("./../img/main/main-bg.jpg"));
+
+		padding: 285px 0;
+	}
+
+	&::before {
+		@include pseudo;
+
+		position: absolute;
+		width: 100%;
+		height: 224px;
+		left: 0px;
+		top: 0px;
+
+		background: linear-gradient(180deg, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
+
+	}
+
+	// .main__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (min-width:1000px) {
+			justify-content: center;
+			align-items: center;
+
+		}
+	}
+
+	// .main__slogo
+	&__slogo {
+		opacity: 0;
+		height: 360px;
+
+		@media (min-width:1000px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			opacity: 1;
+			gap: 36px;
+			height: 100%;
+		}
+	}
+
+	// .main__title
+	&__title {
+
+		@media (min-width:1000px) {
+			font-family: 'NewBaskervilleC';
+
+			font-weight: 400;
+			font-size: 72px;
+			line-height: 80px;
+
+			text-align: center;
+
+			color: $textColorTitle;
+
+			max-width: 800px;
+
+
+		}
+	}
+
+	// .main__subtitle
+	&__subtitle {
+		@media (min-width:1000px) {
+
+			font-family: 'Jost';
+
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 32px;
+			text-align: center;
+			color: $textColorTitle;
+
+			max-width: 500px;
+
+		}
+	}
+
+	// .main__button
+	&__button {
+		font-family: 'Jost';
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 500;
+		white-space: nowrap;
+		color: var(--color-text-light);
+		background-color: var(--color-accent);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 48px;
+		max-width: 187px;
+		width: 100%;
+		padding: 14px 20px;
+		border: 2px solid var(--color-accent);
+		border-radius: 8px;
+		@include transition-time(2);
+
+
+
+		&:hover {
+			color: var(--color-text-dark);
+			background-color: var(--color-text-light);
+		}
+
+		&:active {
+			background-color: hsl(0, 0%, 80%);
+			color: var(--color-text-dark);
+		}
+
+		@media (min-width:1000px) {
+			display: none;
+		}
+	}
+}

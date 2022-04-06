@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	@@include('html/head.html', {
+		"title": "Главная"
+		})
+
+
+<body style="background: #fff;">
+<div class="wrapper page">
+	@@include('html/header.html', {})
+	@@include('html/blocks/drop-down.html', {})
+
+	@@include('html/section/events.html', {
+		"title": "Cобытия"
+	})
+	@@include('html/blocks/eventscontrol.html', {})
+
+	@@include('html/footer.html', {})
+
+</div>
+	
+	
+
+	<script src="./js/app.min.js"></script>
+
+</body>
+
+</html>

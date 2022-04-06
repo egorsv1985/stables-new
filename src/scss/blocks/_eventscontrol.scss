@@ -1,0 +1,120 @@
+.events-control {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 32px;
+    }
+
+    &__buttons {
+        padding: 14px 124px 14px 90px;
+        background: inherit;
+        border: 1px solid rgba(199, 161, 122, 0.55);
+        border-radius: 8px;
+        @extend %solutionBtns-text;
+        color: #010103;
+        margin-bottom: 15px;
+        width: 100%;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url('./../img/events-arow-down.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 14px;
+            height: 9px;
+            top: 18px;
+            right: 31%;
+
+            @media (min-width: 576px) {
+                right: 40%;
+            }
+
+            @media (min-width: 1000px) {
+                right: 44%;
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(min-width: 1024px) {
+            width: 100%;
+            margin-top: 16px;
+        }
+    }
+
+    &__menu {
+        border: none;
+
+        align-items: center;
+    }
+
+    .bottomMenu {
+        justify-content: space-around;
+        display: flex;
+    }
+
+    &__list {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(n+3):nth-child(-n+6) {
+            display: none;
+
+            @media(min-width: 1024px) {
+                display: flex;
+            }
+        }
+    }
+
+    &__list.active {
+        background-color: #C7A17A;
+        border-radius: 8px;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    &__nextControl {
+        position: absolute;
+        top: 40%;
+        width: 7px;
+        height: 7px;
+        border-bottom: 1px solid #010103;
+        border-right: 1px solid #010103;
+        transform: rotate(-45deg);
+    }
+
+    &__prewControl {
+        position: absolute;
+        top: 45%;
+        width: 7px;
+        height: 7px;
+        border-bottom: 1px solid #010103;
+        border-right: 1px solid #010103;
+        transform: rotate(135deg);
+    }
+
+    &__coins {
+        display: none;
+        padding-right: 17px;
+        border: none;
+
+
+        @media(min-width: 1024px) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+// Colors
+
+$textColor: #010103;
+$textColorTitle: #fff;
+$textColorMain: #fff;
+$textColorSubtitle: #D8DBEC;
+$textColorActive: #C7A17A;
+$textColorGray: #A7A7A7;
+$textColorGallery: #503D3B;
+
+$bgColor: #FAF5F0;
+$bgColorDropDown: #020203;
+
+$textColorBtn: #fff;
+
+//color
+$colorTextLight: #fff;
+$colorTextGray: #A7A7A7;
+$colorTextDark: #000;
+$colorTextAccent: #C7A17A;
+// colortheme
+$colorAccent: #C7A17A;
+$colorAccentDark: #020203;
+// $colorAccentDarkSecond: #262626;
+// $colorAccentDarkLight: #D1D7ED;
+// $colorAccentDarkLight2: #D1D7EC;
+
+
+
+
+//colorBG
+$colorBGDarck: #13131A;
+$colorDecor: #262424;
+
+
+
+//colortheme2
+
+
+:root {
+    --color-text-light: #{$colorTextLight};
+    --color-text-gray: #{$colorTextGray};
+    --color-text-dark: #{$colorTextDark};
+    --color-text-accent: #{$colorTextAccent};
+    --color-accent: #{$colorAccent};
+    --color-accent-dark: #{$colorAccentDark};
+    --color-bg-dark: #{$colorBGDarck};
+    --color-decor: #{$colorDecor};
+    // --color-accent-dark-second: #{$colorAccentDarkSecond}; 
+    // --color-accent-dark-light: #{$colorAccentDarkLight};
+    // --color-accent-dark-light2: #{$colorAccentDarkLight2}; 
+}
+
+
+%title-text {
+    font-family: 'NewBaskervilleC';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+%description-text {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #503D3B;
+}
+
+%price-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+%footer-social {}
+
+%solutionBtns-text {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7A17A;
+}
+
+%newbaskervillec-400 {
+    font-family: "NewBaskervilleCTT";
+    font-weight: 400;
+}
