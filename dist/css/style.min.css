@@ -612,7 +612,7 @@ template {
 }
 @media only screen and (min-width: 1279px) {
   .header__wrapper {
-    gap: 260px;
+    gap: 0;
   }
 }
 @media only screen and (min-width: 1279px) {

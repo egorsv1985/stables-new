@@ -20,7 +20,7 @@
 
 		@include flex (space-between, center);
 		@include media(min, xl) {
-			gap: 260px;
+			gap: 0;
 		}
 	}
 
