@@ -2,28 +2,64 @@
 
 	// .header__top
 	&__top {
-		background: $bgColorHeader;
+		background-color: $bgColorHeader;
 		height: 48px;
 		padding: 12px 0;
 		margin-bottom: 15px;
+
+		@include media(min, xl) {
+			height: 88px;
+			background-color: $bgColorHeaderBig;
+			padding: 32px 0;
+			margin-bottom: 0;
+		}
 	}
-
-
 
 	// .header__wrapper
 	&__wrapper {
 
 		@include flex (space-between, center);
+		@include media(min, xl) {
+			gap: 260px;
+		}
+	}
+
+	// .header__right
+	&__right {
+		@include media(min, xl) {
+			@include flex (space-between, center);
+			gap: 32px;
+		}
 	}
 
 	// .header__burger
 	&__burger {}
 
+	// .header__nav
+	&__nav {}
+
+	// .header__left
+	&__left {
+		@include media(min, xl) {
+			@include flex (space-between, center);
+			gap: 32px;
+		}
+	}
+
 	// .header__reserve-box
 	&__reserve-box {
 		margin-left: 25px;
-	
+		@include media(min, xl) {
+			@include flex (space-between, center);
+			gap: 32px;
+			margin-left: 0;
+		}
+
 	}
+
+	// .header__tel
+	&__tel {}
+
 
 	// .header__reserve
 	&__reserve {

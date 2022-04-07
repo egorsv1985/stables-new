@@ -1,18 +1,43 @@
 <header class="header">
-	<div class="header__top">
+	<div class="header__top container">
 		<div class="container">
 			<div class="header__wrapper">
-				<button type="button" class="header__burger burger">
-					<div class="burger__inner">
-						<span></span>
-					</div>
-				</button>
-				<div class="header__reserve-box">
-					<span class="header__reserve">Забронировать стол</span>
+				<div class="header__right">
+					<button type="button" class="header__burger burger">
+						<div class="burger__inner">
+							<span></span>
+						</div>
+					</button>
+					<nav class="header__nav nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">О нас</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">События</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Банкеты</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Заказ</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">О доставке</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<div class="header__cart cart">
-					<img class="cart__img" src="@img/header/cart.svg" alt="Корзина">
-					<span class="cart__counter">20</span>
+				<div class="header__left">
+					<div class="header__reserve-box">
+						<a href="tel:8 (8332) 64-10-86" class="header__tel">8 (8332) 64-10-86</a>
+						<span class="header__reserve">Забронировать стол</span>						
+					</div>
+					<div class="header__cart cart">
+						<img class="cart__img" src="@img/header/cart.svg" alt="Корзина">
+						<span class="cart__desc">Корзина</span>
+						<span class="cart__counter">20</span>						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -22,6 +47,4 @@
 			<img src="@img/header/mobile-logo.svg" alt="logo" class="logo__img">
 		</a>
 	</div>
-
-
 </header>
