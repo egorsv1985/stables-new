@@ -1,0 +1,21 @@
+.cart {
+	@include flex (space-between, center);
+	gap: 8px;
+	 // .cart__img
+
+	&__img {
+		cursor: pointer;
+	}
+
+	// .cart__counter
+	&__counter {
+
+		font-family: 'Jost';
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 185%;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $textColorSecondary;
+	}
+}

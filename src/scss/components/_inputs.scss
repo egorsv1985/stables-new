@@ -1,0 +1,51 @@
+/* стили для input */
+.input {
+	display: block;
+	width: 290px;
+	height: 44px;
+	padding: 10px 12px;
+	font-family: Jost;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #010103;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #E2DFDD;
+	border-radius: 8px;
+	transition: border-color 0.15s ease-in-out;
+
+	&::placeholder {
+		color: #A7A7A7;
+
+	}
+
+	&:hover {
+		border-color: #C7A17A;
+		outline: 0;
+	}
+
+	&:focus,
+	&:focus-visible {
+		border-color: #E2DFDD;
+		outline: 0;
+	}
+
+	&:disabled,
+	&:read-only {
+		background-color: #FAF5F0;
+		opacity: 1;
+	}
+
+	&:invalid {
+		border-color: #DB3636;
+
+		&:invalid:focus {
+			border-color: #DB3636;
+		}
+
+		&::placeholder {
+			color: #DB3636;
+		}
+	}
+}

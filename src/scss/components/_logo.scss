@@ -1,0 +1,8 @@
+.logo {
+@include flex (center, center);
+	// .logo__link
+	&__link {}
+
+	// .logo__img
+	&__img {}
+}

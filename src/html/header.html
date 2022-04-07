@@ -1,39 +1,27 @@
 <header class="header">
-	<div class="container">
-		
+	<div class="header__top">
+		<div class="container">
 			<div class="header__wrapper">
-				<div class="header__block">
-					<button type="button" class="menu__icon icon-menu">
-						<div class="icon-menu__inner">
-							<span></span>
-						</div>
-					</button>
-					@@include('./blocks/nav.html', {})
-				</div>
-				<a href="#" class="header__order">Заказ из меню</a>
-				<div class="header__block-right">
-					<div class="header__contacts contacts">
-						<ul class="contacts__list">
-							<li class="contacts__item">
-								<a href="tel:8 (8332) 64-10-86" class="contacts__tel">8 (8332) 64-10-86</a>
-							</li>
-							<li class="contacts__item">
-								<a href="#" class="contacts__reserve">ЗАБРОНИРОВАТЬ СТОЛ</a>
-							</li>
-						</ul>
+				<button type="button" class="header__burger burger">
+					<div class="burger__inner">
+						<span></span>
 					</div>
-					<div class="header__basket">
-						<img src="@img/header/basket.svg" class="header__basket-img" alt="basket">
-						<a href="#" class="header__basket-link">
-							<span class="header__basket-name">Корзина</span>
-						</a>
-						<span class="header__counter">2</span></div>
+				</button>
+				<div class="header__reserve-box">
+					<span class="header__reserve">Забронировать стол</span>
 				</div>
-				
-</div>
-<a href="index.html" class="header__logo logo">
-<div class="header__logo-img"></div>
-</a>
+				<div class="header__cart cart">
+					<img class="cart__img" src="@img/header/cart.svg" alt="Корзина">
+					<span class="cart__counter">20</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__logo logo">
+		<a href="#" class="logo__link">
+			<img src="@img/header/mobile-logo.svg" alt="logo" class="logo__img">
+		</a>
+	</div>
 
-</div>
+
 </header>
