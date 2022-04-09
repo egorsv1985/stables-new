@@ -68,10 +68,6 @@ function watcher() {
 	gulp.watch(path.watch.images, images);
 }
 
-export {
-	svgSprive
-}
-
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
@@ -81,6 +77,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
+const svgSprivea = svgSprive;
 // const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // Экспорт сценариев
@@ -92,6 +89,9 @@ export {
 }
 export {
 	deployZIP
+}
+export {
+	svgSprivea
 }
 // export {
 // 	deployFTP
