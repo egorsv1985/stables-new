@@ -9,7 +9,8 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprivea"
+    "svgSprive": "gulp svgSprivea",
+    "purgecss": "gulp purgecss"
   },
   "author": "Sabancev Egor",
   "license": "ISC",
@@ -32,6 +33,7 @@
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
     "gulp-pug": "latest",
+    "gulp-purgecss": "^4.0.3",
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",

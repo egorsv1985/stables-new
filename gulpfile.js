@@ -52,6 +52,9 @@ import {
 	svgSprive
 } from "./gulp/tasks/svgSprive.js";
 import {
+	purgeCss
+} from "./gulp/tasks/purgecss.js";
+import {
 	zip
 } from "./gulp/tasks/zip.js";
 // import {
@@ -78,6 +81,7 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const svgSprivea = svgSprive;
+const purgecss = purgeCss;
 // const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // Экспорт сценариев
@@ -92,6 +96,9 @@ export {
 }
 export {
 	svgSprivea
+}
+export {
+	purgecss
 }
 // export {
 // 	deployFTP
