@@ -95,5 +95,30 @@
 	&__logo {}
 }
 
+.home {
+	.header {
+		border-bottom: none;
+		position: relative;
+
+		&::after {
+			@include pseudo;
+			@include wh(100%, 224px);
+			@include pos (absolute, $top: 0, $left: 0);
 
 
+			background: linear-gradient(180deg, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
+
+		}
+
+	}
+
+	.header__top {
+		background-color: transparent;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	}
+
+	.header__centr {
+		margin-left: 0;
+
+	}
+}

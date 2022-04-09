@@ -481,6 +481,10 @@ template {
   }
 }
 
+.home {
+  color: #fff;
+}
+
 .burger {
   width: 24px;
   height: 24px;
@@ -588,6 +592,16 @@ template {
   color: #c7a17a;
 }
 
+.home .cart__counter {
+  display: none;
+}
+.home .cart__img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/header/cart-home.svg");
+}
+
 .link {
   font-family: "Jost";
   font-weight: 500;
@@ -598,6 +612,7 @@ template {
   transition: 0.3s ease-out 0.1s;
   color: #010103;
   position: relative;
+  z-index: 1;
 }
 .link:hover {
   color: #c7a17a;
@@ -623,6 +638,16 @@ template {
     transform: scale(0);
     transition: 0.3s;
   }
+}
+
+.home .link {
+  color: #fff;
+}
+.home .link:hover {
+  color: #c7a17a;
+}
+.home .link:hover:after {
+  transform: scale(1);
 }
 
 .logo {
@@ -775,48 +800,26 @@ template {
     font-size: 14px;
   }
 }
-.header-shope .header__top {
-  background-color: transparent;
-  padding: 16px 0;
+.home .header {
+  border-bottom: none;
+  position: relative;
 }
-@media only screen and (min-width: 1279px) {
-  .header-shope .header__top {
-    padding: 32px 0;
-  }
-}
-.header-shope .header__centr {
-  display: none;
-}
-.header-shope .logo {
-  margin: 4px 0;
-}
-@media only screen and (min-width: 1279px) {
-  .header-shope .logo {
-    margin: 0;
-  }
-}
-.header-shope .logo__link {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("./../img/header/logo-mob-shope.svg");
-  width: 121px;
-  height: 24px;
+.home .header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 224px;
   position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
 }
-@media only screen and (min-width: 1279px) {
-  .header-shope .logo__link {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url("./../img/header/logo-shope.svg");
-    width: 170px;
-    height: 88px;
-    top: 0;
-  }
+.home .header__top {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.home .header__centr {
+  margin-left: 0;
 }
 
 .nav {

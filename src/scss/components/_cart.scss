@@ -62,3 +62,17 @@
 		}
 	}
 }
+
+.home {
+	.cart__counter {
+
+		display: none;
+	}
+
+	.cart__img {
+
+		@include background (url("./../img/header/cart-home.svg"));
+
+	}
+
+}

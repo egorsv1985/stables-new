@@ -13,6 +13,8 @@
 	color: $linkColor;
 	position: relative;
 
+	z-index: 1;
+
 
 
 	&:hover {
@@ -37,6 +39,21 @@
 			background-color: #951717;
 			transform: scale(0);
 			transition: .3s;
+		}
+	}
+}
+
+.home {
+	.link {
+		color: $textColorHome;
+
+		&:hover {
+			color: $linkColorHover;
+
+			&:after {
+				transform: scale(1);
+			}
+
 		}
 	}
 }
