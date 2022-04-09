@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprivea",
+    "svgSprive": "gulp svgSprite",
     "purgecss": "gulp purgecss"
   },
   "author": "Sabancev Egor",
