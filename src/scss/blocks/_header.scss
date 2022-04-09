@@ -1,17 +1,18 @@
 .header {
+	border-bottom: 1px solid #efefef;
 
 	// .header__top
 	&__top {
 		background-color: $bgColorHeader;
 		height: 48px;
 		padding: 12px 0;
-		margin-bottom: 15px;
+
 
 		@include media(min, xl) {
 			height: 88px;
 			background-color: $bgColorHeaderBig;
 			padding: 32px 0;
-			margin-bottom: 0;
+
 		}
 	}
 
@@ -19,6 +20,7 @@
 	&__wrapper {
 
 		@include flex (space-between, center);
+
 		@include media(min, xl) {
 			gap: 0;
 		}
@@ -30,6 +32,10 @@
 			@include flex (space-between, center);
 			gap: 32px;
 		}
+
+		@include media(min, xxl) {
+			gap: 48px;
+		}
 	}
 
 	// .header__burger
@@ -38,22 +44,40 @@
 	// .header__nav
 	&__nav {}
 
+	// .header__centr
+	&__centr {
+		margin-left: 25px;
+
+		@include media(min, xl) {
+			display: none;
+		}
+	}
+
 	// .header__left
 	&__left {
-		@include media(min, xl) {
-			@include flex (space-between, center);
-			gap: 32px;
+		@include flex (space-between, center);
+		gap: 32px;
+
+		@include media(min, xxl) {
+			gap: 48px;
 		}
 	}
 
 	// .header__reserve-box
 	&__reserve-box {
-		margin-left: 25px;
+		display: none;
+
 		@include media(min, xl) {
 			@include flex (space-between, center);
 			gap: 32px;
 			margin-left: 0;
 		}
+
+		@include media(min, xxl) {
+			gap: 48px;
+			font-size: 14px;
+		}
+
 
 	}
 
@@ -62,15 +86,7 @@
 
 
 	// .header__reserve
-	&__reserve {
-		font-family: 'Jost';
-		font-weight: 500;
-		font-size: 13px;
-		line-height: 185%;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		color: $textColorLink;
-	}
+	&__reserve {}
 
 	// .header__cart
 	&__cart {}

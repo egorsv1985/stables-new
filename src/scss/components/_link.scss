@@ -1,0 +1,38 @@
+.link {
+	font-family: 'Jost';
+
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 185%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	transition: .3s ease-out .1s;
+
+
+	color: $linkColor;
+	position: relative;
+
+	&::after {
+		@include pseudo;
+		@include pos (absolute, $left:0, $bottom: -32px);
+		width: 100%;
+		height: 1px;
+		background-color: #951717;
+		transform: scale(0);
+		transition: .3s;
+	}
+
+	&:hover {
+		color: $linkColorHover;
+
+		&:after {
+			transform: scale(1);
+		}
+
+	}
+
+	@include media(min, xxl) {
+		font-size: 14px;
+	}
+}

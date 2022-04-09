@@ -1,7 +1,22 @@
 .logo {
-@include flex (center, center);
+	@include flex (center, center);
+	margin: 16px 0;
+	@include media(min, xl) {
+		margin: 0;
+	}
+
 	// .logo__link
-	&__link {}
+	&__link {
+		@include background (url("./../img/header/logo-mob.svg"));
+		@include wh(160px, 32px);
+
+		@include media(min, xl) {
+			@include background (url("./../img/header/logo.svg"));
+			@include wh(240px, 167px);
+			@include pos(absolute, $top: 0, $left: 50%);
+			transform: translateX(-50%);
+		}
+	}
 
 	// .logo__img
 	&__img {}

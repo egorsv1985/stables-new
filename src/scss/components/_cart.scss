@@ -1,27 +1,56 @@
 .cart {
 	@include flex (space-between, center);
 	gap: 8px;
-	// .cart__img
+	
 
+	@include media(min, xl) {
+		gap: 0;
+	}
+
+
+	// .cart__img
 	&__img {
 		cursor: pointer;
+		@include background (url("./../img/header/cart.svg"));
+		@include wh(24px);
+		@include media(min, xl) {
+			margin-right: 7px;
+		}
+		
 	}
 
 	// .cart__counter
 	&__counter {
-
-		font-family: 'Jost';
-		font-weight: 500;
-		font-size: 13px;
-		line-height: 185%;
-		letter-spacing: 1px;
-		text-transform: uppercase;
 		color: $textColorSecondary;
+		@include media(min, xl) {
+			margin-left: 14px;
+		}
+		
+		
 	}
 
 	// .cart__desc
 	&__desc {
-		
-	}
+		display: none;
+		color: $textColor;
+		position: relative;
+		@include media(min, xl) {
+			display: block;
+		}
 
+		&::before {
+			content: "•";
+			display: block;
+			@include pos (absolute, $top: 0, $right: -10px);
+			width: 5px;
+			height: 24px;
+			font-family: 'Jost';
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 185%;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: $linkColorHover;
+		}
+	}
 }

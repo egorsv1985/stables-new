@@ -477,7 +477,7 @@ template {
 }
 @media only screen and (min-width: 1591px) {
   .container {
-    padding: 0 48px;
+    padding: 0;
   }
 }
 
@@ -532,22 +532,127 @@ template {
   align-items: center;
   gap: 8px;
 }
+@media only screen and (min-width: 1279px) {
+  .cart {
+    gap: 0;
+  }
+}
 .cart__img {
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/header/cart.svg");
+  width: 24px;
+  height: 24px;
+}
+@media only screen and (min-width: 1279px) {
+  .cart__img {
+    margin-right: 7px;
+  }
 }
 .cart__counter {
+  color: #C7A17A;
+}
+@media only screen and (min-width: 1279px) {
+  .cart__counter {
+    margin-left: 14px;
+  }
+}
+.cart__desc {
+  display: none;
+  color: #010103;
+  position: relative;
+}
+@media only screen and (min-width: 1279px) {
+  .cart__desc {
+    display: block;
+  }
+}
+.cart__desc::before {
+  content: "•";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 5px;
+  height: 24px;
   font-family: "Jost";
   font-weight: 500;
   font-size: 13px;
   line-height: 185%;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #C7A17A;
+  color: #c7a17a;
 }
+
+.link {
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 185%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s ease-out 0.1s;
+  color: #010103;
+  position: relative;
+}
+.link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #951717;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.link:hover {
+  color: #c7a17a;
+}
+.link:hover:after {
+  transform: scale(1);
+}
+@media only screen and (min-width: 1591px) {
+  .link {
+    font-size: 14px;
+  }
+}
+
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 16px 0;
+}
+@media only screen and (min-width: 1279px) {
+  .logo {
+    margin: 0;
+  }
+}
+.logo__link {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/header/logo-mob.svg");
+  width: 160px;
+  height: 32px;
+}
+@media only screen and (min-width: 1279px) {
+  .logo__link {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./../img/header/logo.svg");
+    width: 240px;
+    height: 167px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 /* стили для input */
 .input {
@@ -591,18 +696,19 @@ template {
   color: #DB3636;
 }
 
+.header {
+  border-bottom: 1px solid #efefef;
+}
 .header__top {
   background-color: #FAF5F0;
   height: 48px;
   padding: 12px 0;
-  margin-bottom: 15px;
 }
 @media only screen and (min-width: 1279px) {
   .header__top {
     height: 88px;
     background-color: #fff;
     padding: 32px 0;
-    margin-bottom: 0;
   }
 }
 .header__wrapper {
@@ -623,16 +729,32 @@ template {
     gap: 32px;
   }
 }
+@media only screen and (min-width: 1591px) {
+  .header__right {
+    gap: 48px;
+  }
+}
+.header__centr {
+  margin-left: 25px;
+}
 @media only screen and (min-width: 1279px) {
+  .header__centr {
+    display: none;
+  }
+}
+.header__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+@media only screen and (min-width: 1591px) {
   .header__left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
+    gap: 48px;
   }
 }
 .header__reserve-box {
-  margin-left: 25px;
+  display: none;
 }
 @media only screen and (min-width: 1279px) {
   .header__reserve-box {
@@ -643,14 +765,19 @@ template {
     margin-left: 0;
   }
 }
-.header__reserve {
-  font-family: "Jost";
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 185%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #010103;
+@media only screen and (min-width: 1591px) {
+  .header__reserve-box {
+    gap: 48px;
+    font-size: 14px;
+  }
+}
+.nav {
+  display: none;
+}
+@media only screen and (min-width: 1279px) {
+  .nav {
+    display: block;
+  }
 }
 .nav__list {
   display: flex;
@@ -658,17 +785,8 @@ template {
   align-items: center;
   gap: 24px;
 }
-.nav__link {
-  font-family: "Jost";
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 185%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #010103;
-  /* Inside auto layout */
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-  margin: 0px 24px;
+@media only screen and (min-width: 1591px) {
+  .nav__list {
+    gap: 32px;
+  }
 }
