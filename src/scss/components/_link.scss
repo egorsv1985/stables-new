@@ -13,15 +13,7 @@
 	color: $linkColor;
 	position: relative;
 
-	&::after {
-		@include pseudo;
-		@include pos (absolute, $left:0, $bottom: -32px);
-		width: 100%;
-		height: 1px;
-		background-color: #951717;
-		transform: scale(0);
-		transition: .3s;
-	}
+
 
 	&:hover {
 		color: $linkColorHover;
@@ -34,5 +26,17 @@
 
 	@include media(min, xxl) {
 		font-size: 14px;
+	}
+
+	@include media(min, xl) {
+		&::after {
+			@include pseudo;
+			@include pos (absolute, $left:0, $bottom: -32px);
+			width: 100%;
+			height: 1px;
+			background-color: #951717;
+			transform: scale(0);
+			transition: .3s;
+		}
 	}
 }

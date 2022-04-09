@@ -1,7 +1,7 @@
 .cart {
 	@include flex (space-between, center);
 	gap: 8px;
-	
+
 
 	@include media(min, xl) {
 		gap: 0;
@@ -13,20 +13,27 @@
 		cursor: pointer;
 		@include background (url("./../img/header/cart.svg"));
 		@include wh(24px);
+
 		@include media(min, xl) {
 			margin-right: 7px;
 		}
-		
+
 	}
 
 	// .cart__counter
 	&__counter {
+
+		font-size: 13px;
+		line-height: 185%;
+
+
 		color: $textColorSecondary;
+
 		@include media(min, xl) {
 			margin-left: 14px;
 		}
-		
-		
+
+
 	}
 
 	// .cart__desc
@@ -34,6 +41,7 @@
 		display: none;
 		color: $textColor;
 		position: relative;
+
 		@include media(min, xl) {
 			display: block;
 		}

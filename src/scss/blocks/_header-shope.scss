@@ -1,0 +1,40 @@
+.header-shope {
+
+
+
+	.header__top {
+		background-color: transparent;
+
+		padding: 16px 0;
+		@include media(min, xl) {
+			
+			padding: 32px 0;
+
+		}
+	}
+
+	.header__centr {
+		display: none;
+	}
+
+	.logo {
+		margin: 4px 0;
+		@include media(min, xl) {
+			margin: 0;
+		}
+	}
+
+	.logo__link {
+		@include background (url("./../img/header/logo-mob-shope.svg"));
+		@include wh(121px, 24px);
+		@include pos(absolute, $top: 16px, $left: 50%);
+		transform: translateX(-50%);
+
+		@include media(min, xl) {
+			@include background (url("./../img/header/logo-shope.svg"));
+			@include wh(170px, 88px);
+			top: 0;
+
+		}
+	}
+}
