@@ -1,0 +1,30 @@
+.main {
+	padding: 80px 0;
+
+	@include background(url("./../img/main/main-bg.jpg"));
+
+	@include media(min, xl) {
+		@include background(url("./../img/main/main-bg.jpg"));
+
+		padding: 285px 0;
+	}
+
+	// .main__wrapper
+	&__wrapper {}
+
+	// .main__slogo
+	&__slogo {}
+
+	// .main__title
+	&__title {
+		color: $textColorHome;
+	}
+
+	// .main__subtitle
+	&__subtitle {
+		color: $textColorHome;
+	}
+
+	// .main__button
+	&__button {}
+}

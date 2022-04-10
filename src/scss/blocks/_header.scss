@@ -1,5 +1,8 @@
 .header {
+	@include pos (absolute, $top: 0, $left: 0);
+	z-index: 50;
 	border-bottom: 1px solid #efefef;
+	width: 100%;
 
 	// .header__top
 	&__top {
@@ -98,7 +101,7 @@
 .home {
 	.header {
 		border-bottom: none;
-		position: relative;
+		
 
 		&::after {
 			@include pseudo;

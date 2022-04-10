@@ -464,6 +464,26 @@ template {
   padding: 0 20px;
 }
 
+.title {
+  font-family: "NewBaskervilleC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 111%;
+  text-align: center;
+  color: #010103;
+}
+
+.subtitle {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  text-align: center;
+  color: #010103;
+}
+
 .container {
   max-width: 1496px;
   min-width: 320px;
@@ -659,6 +679,7 @@ template {
 @media only screen and (min-width: 1279px) {
   .logo {
     margin: 0;
+    padding: 40px 20px;
   }
 }
 .logo__link {
@@ -675,8 +696,8 @@ template {
     background-position: center;
     background-size: cover;
     background-image: url("./../img/header/logo.svg");
-    width: 240px;
-    height: 167px;
+    width: 160px;
+    height: 126px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -725,8 +746,35 @@ template {
   color: #DB3636;
 }
 
+.main {
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/main/main-bg.jpg");
+}
+@media only screen and (min-width: 1279px) {
+  .main {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./../img/main/main-bg.jpg");
+    padding: 285px 0;
+  }
+}
+.main__title {
+  color: #fff;
+}
+.main__subtitle {
+  color: #fff;
+}
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
   border-bottom: 1px solid #efefef;
+  width: 100%;
 }
 .header__top {
   background-color: #FAF5F0;
@@ -802,7 +850,6 @@ template {
 }
 .home .header {
   border-bottom: none;
-  position: relative;
 }
 .home .header::after {
   content: "";

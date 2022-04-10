@@ -3,6 +3,7 @@
 	margin: 16px 0;
 	@include media(min, xl) {
 		margin: 0;
+		padding: 40px 20px;
 	}
 
 	// .logo__link
@@ -12,7 +13,7 @@
 
 		@include media(min, xl) {
 			@include background (url("./../img/header/logo.svg"));
-			@include wh(240px, 167px);
+			@include wh(160px, 126px);
 			@include pos(absolute, $top: 0, $left: 50%);
 			transform: translateX(-50%);
 		}
