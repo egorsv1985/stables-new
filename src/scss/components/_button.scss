@@ -1,0 +1,24 @@
+.button {
+	@include flex (center, center);
+
+	padding: 14px 20px;
+	height: 48px;
+	border-radius: 8px;
+	font-family: 'Jost';
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 125%;
+	text-align: center;
+}
+.button--primary{
+	background-color: $buttonColorPrimary;
+	&:hover{
+		background-color: $buttonColorPrimaryHover;
+	}
+	&:active{
+		background-color: $buttonColorPrimaryActive;
+	}
+	&:disabled{
+		opacity: 0.5;
+	}
+}

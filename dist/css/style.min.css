@@ -427,11 +427,11 @@ template {
 }
 
 @font-face {
-  font-family: "Stratos";
+  font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Stratos-Regular.woff2") format("woff2");
-  src: url("../fonts/Stratos-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Jost-Medium.woff2") format("woff2");
+  src: url("../fonts/Jost-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -443,18 +443,18 @@ template {
   font-style: normal;
 }
 @font-face {
-  font-family: "Jost";
+  font-family: "NewBaskervilleC";
   font-display: swap;
-  src: url("../fonts/Jost-Medium.woff2") format("woff2");
-  src: url("../fonts/Jost-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/NewBaskervilleStd-Roman.woff2") format("woff2");
+  src: url("../fonts/NewBaskervilleStd-Roman.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "NewBaskervilleC Regular";
+  font-family: "Stratos";
   font-display: swap;
-  src: url("../fonts/NewBaskervilleC Regular.woff2") format("woff2");
-  src: url("../fonts/NewBaskervilleC Regular.woff") format("woff");
+  src: url("../fonts/Stratos-Regular.woff2") format("woff2");
+  src: url("../fonts/Stratos-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -466,7 +466,6 @@ template {
 
 .title {
   font-family: "NewBaskervilleC";
-  font-style: normal;
   font-weight: 400;
   font-size: 72px;
   line-height: 111%;
@@ -476,11 +475,18 @@ template {
 
 .subtitle {
   font-family: "Jost";
-  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 133%;
   text-align: center;
+  color: #010103;
+}
+
+.text {
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   color: #010103;
 }
 
@@ -578,7 +584,7 @@ template {
 .cart__counter {
   font-size: 13px;
   line-height: 185%;
-  color: #C7A17A;
+  color: #A7A7A7;
 }
 @media only screen and (min-width: 1279px) {
   .cart__counter {
@@ -639,6 +645,7 @@ template {
 }
 .link:hover:after {
   transform: scale(1);
+  background-color: #c7a17a;
 }
 @media only screen and (min-width: 1591px) {
   .link {
@@ -654,7 +661,7 @@ template {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #951717;
+    background-color: #EFEFEF;
     transform: scale(0);
     transition: 0.3s;
   }
@@ -663,23 +670,35 @@ template {
 .home .link {
   color: #fff;
 }
+@media only screen and (min-width: 1279px) {
+  .home .link::after {
+    background-color: #fff;
+  }
+}
 .home .link:hover {
   color: #c7a17a;
 }
 .home .link:hover:after {
   transform: scale(1);
+  background-color: #c7a17a;
 }
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 16px 0;
+  z-index: 1;
 }
 @media only screen and (min-width: 1279px) {
   .logo {
     margin: 0;
     padding: 40px 20px;
+    top: -20px;
   }
 }
 .logo__link {
@@ -698,12 +717,35 @@ template {
     background-image: url("./../img/header/logo.svg");
     width: 160px;
     height: 126px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  height: 48px;
+  border-radius: 8px;
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+}
+
+.button--primary {
+  background-color: #c7a17a;
+}
+.button--primary:hover {
+  background-color: #E0B68B;
+}
+.button--primary:active {
+  background-color: #AC8B6A;
+}
+.button--primary:disabled {
+  opacity: 0.5;
+}
+
 /* стили для input */
 .input {
   display: block;
@@ -762,17 +804,171 @@ template {
     padding: 285px 0;
   }
 }
+.main__slogo {
+  opacity: 0;
+  height: 360px;
+}
+@media only screen and (min-width: 1279px) {
+  .main__slogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    opacity: 1;
+    gap: 32px;
+  }
+}
 .main__title {
   color: #fff;
+  max-width: 800px;
 }
 .main__subtitle {
   color: #fff;
+  max-width: 500px;
 }
+.main__button {
+  max-width: 188px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1279px) {
+  .main__button {
+    display: none;
+  }
+}
+
+.menu {
+  padding: 32px 0 16px;
+  background-color: #020203;
+}
+@media only screen and (min-width: 1591px) {
+  .menu {
+    padding: 80px 0;
+  }
+  .menu .container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+.menu__wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+}
+@media only screen and (min-width: 767px) {
+  .menu__wraper {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 64px;
+  }
+}
+.menu__img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 335px;
+  height: 224px;
+  border-radius: 0px 16px 16px 0px;
+}
+@media only screen and (min-width: 1279px) {
+  .menu__img {
+    width: 780px;
+    height: 639px;
+  }
+}
+.menu__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 32px;
+}
+@media only screen and (min-width: 1023px) {
+  .menu__wrap {
+    max-width: 560px;
+  }
+}
+.menu__box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+}
+@media only screen and (min-width: 1591px) {
+  .menu__box {
+    gap: 20px;
+  }
+}
+.menu__title {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: left;
+  color: #fff;
+}
+@media only screen and (min-width: 1279px) {
+  .menu__title {
+    font-size: 48px;
+    line-height: 117%;
+  }
+}
+.menu__text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #A7A7A7;
+  letter-spacing: 0;
+}
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #262424;
+}
+.menu__item .menu__text {
+  max-width: 175px;
+}
+@media only screen and (min-width: 767px) {
+  .menu__item .menu__text {
+    min-width: 215px;
+  }
+}
+.menu__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media only screen and (min-width: 767px) {
+  .menu__inner {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+.menu__subtitle {
+  font-family: "NewBaskervilleC";
+  color: #fff;
+  text-align: left;
+}
+@media only screen and (min-width: 767px) {
+  .menu__subtitle {
+    min-width: 175px;
+  }
+}
+.menu__button {
+  max-width: 106px;
+}
+
 .header {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 50;
   border-bottom: 1px solid #efefef;
   width: 100%;
 }
@@ -824,6 +1020,8 @@ template {
   justify-content: space-between;
   align-items: center;
   gap: 32px;
+  z-index: 1;
+  position: relative;
 }
 @media only screen and (min-width: 1591px) {
   .header__left {

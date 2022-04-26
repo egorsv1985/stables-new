@@ -1,0 +1,137 @@
+.menu {
+	padding: 32px 0 16px;
+	background-color: $bgColorDark;
+
+	@include media(min, xxl) {
+		padding: 80px 0;
+		 .container {
+			padding: 0;
+			margin: 0;
+			max-width: 100%;
+		}
+	}
+
+	// .menu__wraper
+	&__wraper {
+		@include flex (space-between, center, wrap, column);
+		gap: 32px;
+
+		@include media (min, md) {
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 64px;
+		}
+	}
+
+	// .menu__img
+	&__img {
+		max-width: 100%;
+		max-height: 100%;
+		width: 335px;
+		height: 224px;
+		border-radius: 0px 16px 16px 0px;
+
+		@include media(min, xl) {
+			width: 780px;
+			height: 639px;
+
+			
+		}
+	}
+
+	// .menu__wrap
+	&__wrap {
+		@include flex (space-between, $flex-direction: column);
+		gap: 32px;
+
+		@include media (min, lg) {
+			max-width: 560px;
+		}
+	}
+
+	// .menu__box
+	&__box {
+		@include flex (space-between, $flex-direction: column);
+		gap: 16px;
+		@include media (min, xxl) {
+			gap: 20px;
+		}
+	}
+
+	// .menu__title
+	&__title {
+		font-size: 32px;
+		line-height: 40px;
+		text-align: left;
+		color: $textColorHome;
+
+		@include media(min, xl) {
+			font-size: 48px;
+			line-height: 117%;
+		}
+
+
+	}
+
+	// .menu__text
+	&__text {
+
+		font-size: 16px;
+		line-height: 26px;
+		color: $textColorSecondary;
+		letter-spacing: 0;
+	}
+
+	// .menu__list
+	&__list {
+		@include flex (space-between, $flex-direction: column);
+
+
+	}
+
+	// .menu__item
+	&__item {
+		@include flex (space-between, flex-end);
+		gap: 16px;
+		padding: 14px 0;
+		border-top: 1px solid #262424;
+
+		.menu__text {
+			max-width: 175px;
+
+			@include media (min, md) {
+				min-width: 215px;
+			}
+		}
+
+	}
+
+	// .menu__inner
+	&__inner {
+		@include flex (space-between, $flex-direction: column);
+
+		@include media (min, md) {
+			flex-direction: row;
+
+			gap: 32px;
+		}
+	}
+
+	// .menu__subtitle
+	&__subtitle {
+
+		font-family: 'NewBaskervilleC';
+		color: $textColorHome;
+		text-align: left;
+
+		@include media (min, md) {
+			min-width: 175px;
+		}
+
+	}
+
+	// .menu__button
+	&__button {
+		max-width: 106px;
+	}
+}

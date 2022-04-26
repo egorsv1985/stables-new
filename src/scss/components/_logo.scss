@@ -1,9 +1,14 @@
 .logo {
 	@include flex (center, center);
+	@include pos(absolute, $top: 50px, $left: 50%);
+	transform: translateX(-50%);
 	margin: 16px 0;
+	z-index: 1;
+
 	@include media(min, xl) {
 		margin: 0;
 		padding: 40px 20px;
+		top: -20px;
 	}
 
 	// .logo__link
@@ -14,8 +19,7 @@
 		@include media(min, xl) {
 			@include background (url("./../img/header/logo.svg"));
 			@include wh(160px, 126px);
-			@include pos(absolute, $top: 0, $left: 50%);
-			transform: translateX(-50%);
+
 		}
 	}
 

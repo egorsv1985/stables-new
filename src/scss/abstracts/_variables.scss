@@ -2,6 +2,7 @@
 $textColor: #010103;
 $textColorSecondary: #C7A17A;
 $textColorHome: #fff;
+$textColorSecondary: #A7A7A7;
 $linkColor: #010103;
 $linkColorHover: #c7a17a;
 
@@ -13,6 +14,13 @@ $bgColor: #fff;
 $bgColorHome:#503D3B;
 $bgColorHeader: #FAF5F0;
 $bgColorHeaderBig: #fff;
+$bgColorDark: #020203;
+
+// buttonsColors
+
+$buttonColorPrimary: #c7a17a;
+$buttonColorPrimaryHover:#E0B68B;
+$buttonColorPrimaryActive: #AC8B6A;
 
 
 $grid_breakpoints: (
@@ -22,6 +30,10 @@ $grid_breakpoints: (
    md: 767px,
    sm: 575px,
 );
+
+
+
+
 
 
 

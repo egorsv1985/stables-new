@@ -1,6 +1,5 @@
 .title {
 	font-family: 'NewBaskervilleC';
-	font-style: normal;
 	font-weight: 400;
 	font-size: 72px;
 	line-height: 111%;
@@ -12,7 +11,6 @@
 
 .subtitle {
 	font-family: 'Jost';
-	font-style: normal;
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 133%;
@@ -21,4 +19,13 @@
 
 	color: $textColor;
 
+}
+
+.text {
+	font-family: 'Jost';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	color: $textColor;
 }

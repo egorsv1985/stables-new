@@ -1,6 +1,5 @@
 .header {
 	@include pos (absolute, $top: 0, $left: 0);
-	z-index: 50;
 	border-bottom: 1px solid #efefef;
 	width: 100%;
 
@@ -60,6 +59,8 @@
 	&__left {
 		@include flex (space-between, center);
 		gap: 32px;
+		z-index: 1;
+		position: relative;
 
 		@include media(min, xxl) {
 			gap: 48px;
@@ -101,7 +102,7 @@
 .home {
 	.header {
 		border-bottom: none;
-		
+
 
 		&::after {
 			@include pseudo;
@@ -118,6 +119,8 @@
 	.header__top {
 		background-color: transparent;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+
 	}
 
 	.header__centr {

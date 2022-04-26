@@ -13,18 +13,35 @@
 	&__wrapper {}
 
 	// .main__slogo
-	&__slogo {}
+	&__slogo {
+		opacity: 0;
+		height: 360px;
+
+		@include media(min, xl) {
+			@include flex(center, center, wrap, column);
+			opacity: 1;
+			gap: 32px;
+		}
+	}
 
 	// .main__title
 	&__title {
 		color: $textColorHome;
+		max-width: 800px;
 	}
 
 	// .main__subtitle
 	&__subtitle {
 		color: $textColorHome;
+		max-width: 500px;
 	}
 
 	// .main__button
-	&__button {}
+	&__button {
+		max-width: 188px;
+		margin: 0 auto;
+		@include media(min, xl) {
+			display: none;
+		}
+	}
 }
